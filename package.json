@@ -4,6 +4,17 @@
   "workspaces": ["packages/*", "apps/*"],
   "scripts": {
     "dev": "npm run dev -w apps/sayt",
+    "dev:admin": "npm run dev -w apps/admin",
+    "build:admin": "npm run build -w apps/admin",
+    "build:all": "npm run build -w apps/sayt && npm run build -w apps/admin",
+    "start:admin": "npm run start -w apps/admin",
+    "db:migrate": "npm run migrate -w packages/db",
+    "admin:create": "npm run admin:create -w apps/admin --",
+    "content:seed": "npm run content:seed -w apps/admin --",
+    "cms:build": "node scripts/cms.mjs build",
+    "cms:migrate": "node scripts/cms.mjs migrate",
+    "cms:start": "node scripts/cms.mjs start",
+    "cms:dev": "node scripts/cms.mjs dev",
     "build": "npm run build -w apps/sayt",
     "serve": "npm run serve -w apps/sayt",
     "lint": "npm run lint --workspaces --if-present",
@@ -14,5 +25,5 @@
     "qa:visual": "npm run qa:visual -w apps/sayt",
     "qa:regressions": "npm run qa:regressions -w apps/sayt"
   },
-  "engines": { "node": ">=20.9.0" }
+  "engines": { "node": "24.x" }
 }

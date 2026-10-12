@@ -1,7 +1,8 @@
 "use client";
+import { applyLabels, useSiteContent } from "./CmsProvider";
 import { useId, useRef, useState } from "react";
-import { contacts } from "@/content/aloqa";
-import { kasalText as T, sickAnimalKeys, sickAnimals, type SickAnimalKey } from "@/content/kasallik";
+
+import { kasalText as defaultText, sickAnimalKeys, sickAnimals, type SickAnimalKey } from "@/content/kasallik";
 import { drugs, otherDrugNames } from "@/content/ombor";
 import { actionIdFor, checkDay, isFinished, treatmentDaysFor } from "@/lib/drug-store";
 import { phoneText, telHref, telegramHref } from "@/lib/format";
@@ -11,6 +12,8 @@ import { demoDefs, useDemoStore } from "./DemoStore";
 // Shoshilinch alomatda veterinarga murojaat birinchi o'rinda, davolash boshqaruvi ko'rsatilmaydi.
 // "Bajarildi": kunning hamma dorisi yetganda faol; takroriy bosish bir marta hisoblanadi.
 export function SickHelper({ storeHref = "#ombor" }: { storeHref?: string }) {
+  const { contacts, website: { labels } } = useSiteContent();
+  const T = applyLabels("kasalText", defaultText, labels);
   const id = useId();
   const { state, dispatch } = useDemoStore();
   const [animalKey, setAnimalKey] = useState<SickAnimalKey>("sigir");

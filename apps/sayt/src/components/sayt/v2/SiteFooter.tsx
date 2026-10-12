@@ -1,12 +1,16 @@
+"use client";
+import { isSiteLinkAvailable, useSiteContent } from "./CmsProvider";
 import Link from "next/link";
-import { contacts } from "@/content/aloqa";
-import { nav, site } from "@/content/bosh";
+
+
 import { instagramHref, phoneText, telHref, telegramHref } from "@/lib/format";
 import { Brand } from "./Brand";
 
 // Footer (TZ v3.1 §4.9): faqat tasdiqlangan aloqa; yo'q qiymat ko'rsatilmaydi (F-07, Q18); /maxfiylik va /shartlar (F-08, Q19).
 export function SiteFooter() {
-  const c = contacts;
+  const { contacts: c, website } = useSiteContent();
+  const { home: { nav, site } } = website;
+  const legalLinks = [{ href: "/maxfiylik", label: "Maxfiylik" }, { href: "/shartlar", label: "Shartlar" }, { href: "/aloqa", label: "Aloqa" }].filter((link) => isSiteLinkAvailable(link.href, website));
   return (
     <footer id="aloqa">
       <div className="wrap fgrid">
@@ -28,13 +32,13 @@ export function SiteFooter() {
         <div>
           <h2>Bo‘limlar</h2>
           <ul>
-            {nav.footerSections.map((l) => <li key={l.href}><Link href={l.href}>{l.label}</Link></li>)}
+            {nav.footerSections.filter((l) => isSiteLinkAvailable(l.href, website)).map((l) => <li key={l.href}><Link prefetch={false} href={l.href}>{l.label}</Link></li>)}
           </ul>
         </div>
         <nav className="footer-guides" aria-labelledby="footer-guides-heading">
           <h2 id="footer-guides-heading">Qo‘llanmalar va savollar</h2>
           <ul>
-            {nav.footerGuides.map((l) => <li key={l.href}><Link href={l.href}>{l.label}</Link></li>)}
+            {nav.footerGuides.filter((l) => isSiteLinkAvailable(l.href, website)).map((l) => <li key={l.href}><Link prefetch={false} href={l.href}>{l.label}</Link></li>)}
           </ul>
         </nav>
         <div>
@@ -52,7 +56,7 @@ export function SiteFooter() {
       </div>
       <div className="wrap legal">
         <span>© {new Date().getFullYear()} {site.name} · {site.legal}</span>
-        <span><Link href="/maxfiylik">Maxfiylik</Link> · <Link href="/shartlar">Shartlar</Link> · <Link href="/aloqa">Aloqa</Link></span>
+        <span>{legalLinks.map((link, index) => <span key={link.href}>{index > 0 && " · "}<Link prefetch={false} href={link.href}>{link.label}</Link></span>)}</span>
       </div>
     </footer>
   );

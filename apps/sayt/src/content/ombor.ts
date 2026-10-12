@@ -1,5 +1,5 @@
 // Dori ombori namunasi (TZ v3.1 §4.5). Demo v12 dagi tarkib. Namuna: real tavsiya yoki yaroqlilik tasdig'i emas.
-import type { DrugDef, StockEntry } from "@/lib/drug-store";
+import type { DrugDef, StockEntry } from "../lib/drug-store";
 
 export const drugs: Record<string, DrugDef> = {
   antib: { key: "antib", name: "Antibiotik ukol (Oksitetrasiklin 20%)", unit: "ml", vial: 100 },

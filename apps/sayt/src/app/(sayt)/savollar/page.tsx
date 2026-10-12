@@ -1,8 +1,9 @@
-import { FaqList, PageView } from "@/components/sayt/v2/PageView";
+import { FaqList } from "@/components/sayt/v2/PageView";
+import { PublishedPage } from "@/components/sayt/v2/PublishedPage";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("/savollar");
+export const generateMetadata = () => pageMetadata("/savollar");
 
 export default function Page() {
-  return <PageView path="/savollar"><FaqList /></PageView>;
+  return <PublishedPage path="/savollar"><FaqList /></PublishedPage>;
 }

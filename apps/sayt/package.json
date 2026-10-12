@@ -4,15 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/flatten-segments.mjs out",
-    "start": "node scripts/serve-static.mjs out 3100",
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/start.mjs",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "qa:site": "node scripts/qa/site-check.mjs",
     "qa:behavior": "node scripts/qa/behavior-parity.mjs",
     "qa:visual": "node scripts/qa/visual-parity.mjs",
-    "serve": "node scripts/serve-static.mjs out 3100",
+    "serve": "node scripts/start.mjs",
     "qa:audit": "node scripts/qa/audit-fixes.mjs",
     "qa:regressions": "node scripts/qa/audit-ux-regressions.mjs && node scripts/qa/audit-product-regressions.mjs"
   },
@@ -20,7 +20,9 @@
     "next": "16.4.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "@meningfermam/content": "*"
+    "@meningfermam/content": "*",
+    "@meningfermam/db": "*",
+    "drizzle-orm": "0.45.4"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",

@@ -1,7 +1,7 @@
 // "Molim kasal" namunasi (TZ v3.1 §4.4). Demo v12 dagi barcha ma'lumot saqlangan (egasi qarori, 2026-10-12).
 // Alomat avtomatik tashxis emas: nom "Ehtimoliy holat (namuna)" bilan ko'rsatiladi.
 import type { Rx, Symptom } from "@meningfermam/content";
-import type { CaseDef } from "@/lib/drug-store";
+import type { CaseDef } from "../lib/drug-store";
 
 export type { Symptom };
 

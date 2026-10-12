@@ -465,3 +465,24 @@ footer { background: var(--card); border-top: 1px solid var(--line); margin-top:
   .tabbar, .fab, .cur, .dot, .progress, .loopbtn, .skip, .top { display: none !important; }
   body { padding-bottom: 0; }
 }
+
+/* Admin dizayn sozlamalari. Boshlang'ich qiymatlar mavjud ko'rinishni saqlaydi. */
+body { font-size: var(--cms-font-size, 17px); }
+.wrap, .nav { max-width: var(--cms-max-width, 1160px); }
+section { padding-block: var(--cms-section-spacing, 44px); }
+@media (min-width: 768px) { section { padding-block: calc(var(--cms-section-spacing, 44px) * 1.8181818); } }
+.stage { min-height: min(78vh, var(--cms-hero-height, 640px)); border-radius: calc(var(--r) + 8px); }
+@media (max-width: 640px) { .stage { min-height: 0; } }
+.stage .cms-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.card { border-radius: calc(var(--r) + 6px); }
+.calc, .sick, .store { border-radius: calc(var(--r) + 8px); }
+.ccard { border-radius: var(--r); }
+.cms-image { display: block; width: 100%; height: auto; max-height: 620px; object-fit: cover; border-radius: var(--r); }
+.cms-text { white-space: pre-line; overflow-wrap: anywhere; }
+.cms-section .btn { justify-self: start; }
+.custom-calculator { width: 100%; }
+.custom-calculator-inputs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px; }
+.custom-calculator .fld { min-width: 0; }
+.custom-calculator input { width: 100%; max-width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.custom-calculator label { display: grid; gap: 8px; font-weight: 600; }
+.custom-calculator output { display: block; font-size: 28px; font-weight: 700; overflow-wrap: anywhere; }

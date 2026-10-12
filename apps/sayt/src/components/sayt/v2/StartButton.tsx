@@ -1,8 +1,9 @@
 "use client";
+import { useSiteContent } from "./CmsProvider";
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { contacts } from "@/content/aloqa";
-import { start } from "@/content/bosh";
+
+
 import { phoneText, telHref, telegramHref } from "@/lib/format";
 
 // "Boshlash" (TZ v3.1 §2.4, F-01): /kirish hali yo'q, shuning uchun "Tez kunda" oynasi. Hamma "Boshlash" shu komponent.
@@ -10,6 +11,7 @@ import { phoneText, telHref, telegramHref } from "@/lib/format";
 // Escape, "Yopish" va fon bosilganda yopiladi; fon vaqtincha yashiriladi, fokus oynada qoladi va keyin tugmaga qaytadi.
 // Oyna portal orqali <body> ga chiziladi: sahifa ichidagi qatlamlar (yopishqoq menyu, pastki menyu) uni yopmasin.
 export function StartButton({ className, style }: { className?: string; style?: React.CSSProperties }) {
+  const { contacts, website: { home: { start } } } = useSiteContent();
   const ref = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const id = useId();

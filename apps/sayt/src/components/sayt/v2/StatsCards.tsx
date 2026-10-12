@@ -1,7 +1,10 @@
-import { statistika as T } from "@/content/bosh";
+"use client";
+import { useSiteContent } from "./CmsProvider";
+
 
 // Statistika va juftlash namunasi (TZ v3.1 §4.7). Yemdan zot olib tashlanishi bu bo'limga ta'sir qilmaydi.
 export function MilkCard() {
+  const { statistika: T } = useSiteContent().website.home;
   return (
     <div className="tilt soft-tilt card rv" id="statBox">
       <h3>{T.milkTitle}</h3>
@@ -18,6 +21,7 @@ export function MilkCard() {
 }
 
 export function PedigreeCard() {
+  const { statistika: T } = useSiteContent().website.home;
   return (
     <div className="tilt soft-tilt card rv" id="juftlash">
       <h3>{T.pedigreeTitle}</h3>

@@ -1,11 +1,14 @@
 "use client";
+import { isSiteLinkAvailable, useSiteContent } from "./CmsProvider";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { nav } from "@/content/bosh";
+
 import { NavLink } from "./NavLink";
 
 // Telefon/planshet pastki menyusi (TZ v3.1 §6): joriy bo'lim belgilanadi, safe-area hisobga olinadi (CSS).
 export function TabBar() {
+  const website = useSiteContent().website;
+  const { home: { nav } } = website;
   const pathname = usePathname();
   const [active, setActive] = useState<string | null>(null);
   useEffect(() => {
@@ -24,10 +27,10 @@ export function TabBar() {
       removeEventListener("scroll", onScroll);
       setActive(null);
     };
-  }, [pathname]);
+  }, [pathname, nav.tabbar]);
   return (
     <nav className="tabbar" aria-label="Tezkor menyu">
-      {nav.tabbar.map((it) => {
+      {nav.tabbar.filter((it) => isSiteLinkAvailable(it.href, website)).map((it) => {
         const on = active === it.id;
         return (
           <NavLink key={it.id} href={it.href} className={on ? "on" : it.sos ? "sos" : undefined} aria-current={on ? "location" : undefined}>

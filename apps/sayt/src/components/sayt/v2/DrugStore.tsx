@@ -1,11 +1,13 @@
 "use client";
-import { drugs, omborText as T } from "@/content/ombor";
+import { drugs, omborText as defaultText } from "@/content/ombor";
+import { applyLabels, useSiteContent } from "./CmsProvider";
 import { total } from "@/lib/drug-store";
 import { useDemoStore } from "./DemoStore";
 
 // Dori ombori (TZ v3.1 §4.5; Q12, Q13). Telefonda 1, planshetda 2, kompyuterda 3 ustun (CSS).
 // Yaroqlilik qoldiq miqdoriga tenglashtirilmaydi: "muddat tasdiqlanmagan".
 export function DrugStore() {
+  const T = applyLabels("omborText", defaultText, useSiteContent().website.labels);
   const { state, dispatch } = useDemoStore();
 
   return (

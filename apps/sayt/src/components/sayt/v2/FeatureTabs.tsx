@@ -1,9 +1,13 @@
 "use client";
+import { applyLabels, useSiteContent } from "./CmsProvider";
 import { useId, useRef, useState } from "react";
-import { featuresByKind, statusLabels, statusOrder, statusTabLabels } from "@/content/holat";
+import { statusLabels as defaultLabels, statusOrder, statusTabLabels as defaultTabLabels } from "@/content/holat";
 
 // Funksiyalar holati (TZ v3.1 §4.8; Q16, F-04). Sichqoncha/touch, Tab, ←/→, Home/End; role=tablist/tab/tabpanel.
 export function FeatureTabs() {
+  const { features, website: { labels } } = useSiteContent();
+  const statusLabels = applyLabels("statusLabels", defaultLabels, labels);
+  const statusTabLabels = applyLabels("statusTabLabels", defaultTabLabels, labels);
   const id = useId();
   const [cur, setCur] = useState(0);
   const btns = useRef<(HTMLButtonElement | null)[]>([]);
@@ -41,7 +45,7 @@ export function FeatureTabs() {
         ))}
       </div>
       <div className="st-grid" id={`${id}-p`} role="tabpanel" aria-labelledby={`${id}-t${cur}`} tabIndex={0}>
-        {featuresByKind(kind).map((f, n) => (
+        {features.filter((f) => f.kind === kind).map((f, n) => (
           <div key={f.id} className="sf" style={{ animationDelay: `${n * 0.07}s` }}>
             <i aria-hidden="true">{f.emoji}</i><span className={`badge ${f.kind}`}>{statusLabels[f.kind]}</span><b>{f.title}</b>
           </div>

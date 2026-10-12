@@ -1,14 +1,18 @@
 "use client";
+import { applyLabels, isSiteLinkAvailable, useSiteContent } from "./CmsProvider";
 import { useEffect, useRef, useState } from "react";
-import { loopText } from "@/content/bosh";
-import { problems, problemsHead } from "@/content/muammolar";
+
+import { problemsHead as defaultHead } from "@/content/muammolar";
 import { useReducedMotion } from "@/lib/use-media";
 
 // Muammo kartochkalari lentasi (TZ v3.1 §4.1; Q01, Q02; F-02, F-03).
 // Sekin chapga aylanadi; sichqoncha ustida sekinlashadi; surish mumkin va surish kartochkani bosmaydi;
 // "To'xtatish / Davom ettirish"; ekrandan chiqqanda pauza; reduced-motion'da avtomatik harakat yo'q;
 // Tab bilan kartochkaga o'tilganda lenta to'xtaydi va kartochka ko'rinadigan joyga keladi.
-export function ProblemLoop() {
+export function ProblemLoop({ id = "muammo" }: { id?: string }) {
+  const website = useSiteContent().website;
+  const { loopText, problems } = website.home;
+  const problemsHead = applyLabels("problemsHead", defaultHead, website.labels);
   const loopRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
@@ -94,16 +98,16 @@ export function ProblemLoop() {
     };
   }, []);
 
-  const card = (p: (typeof problems)[number], i: number, copy: boolean) => (
-    <a key={`${copy ? "b" : "a"}${i}`} className="pc tilt" href={p.href} draggable={false} tabIndex={copy ? -1 : undefined} aria-hidden={copy || undefined}>
-      <span className="em" aria-hidden="true">{p.emoji}</span>
-      <span><small>{p.topic}</small><br /><b>“{p.question}”</b></span>
-      <span className="go" aria-hidden="true">›</span>
-    </a>
-  );
+  const card = (p: (typeof problems)[number], i: number, copy: boolean) => {
+    const key = `${copy ? "b" : "a"}${i}`;
+    const content = <><span className="em" aria-hidden="true">{p.emoji}</span><span><small>{p.topic}</small><br /><b>“{p.question}”</b></span></>;
+    return isSiteLinkAvailable(p.href, website)
+      ? <a key={key} className="pc tilt" href={p.href} draggable={false} tabIndex={copy ? -1 : undefined} aria-hidden={copy || undefined}>{content}<span className="go" aria-hidden="true">›</span></a>
+      : <div key={key} className="pc" aria-hidden={copy || undefined}>{content}</div>;
+  };
 
   return (
-    <section id="muammo" style={{ paddingTop: 22, paddingBottom: 6 }} aria-labelledby="muammo-h">
+    <section id={id} style={{ paddingTop: 22, paddingBottom: 6 }} aria-labelledby="muammo-h">
       <div className="wrap">
         <div className="loophead">
           <div className="head" style={{ marginBottom: 0 }}>

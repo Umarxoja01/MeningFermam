@@ -1,12 +1,14 @@
 "use client";
+import { useSiteContent } from "./CmsProvider";
 import { useEffect, useRef, useState } from "react";
-import { eslatma as T } from "@/content/bosh";
+
 
 type Stage = "wait" | "shown" | "later" | "done";
 
 // Eslatma maketi (TZ v3.1 §4.6; Q15, F-06). Haqiqiy push/SMS yubormaydi. "Keyinroq" va "Berdim" faqat maket holatini
 // o'zgartiradi; holat matni screen reader uchun e'lon qilinadi. Reduced-motion'da bildirishnoma darhol ko'rinadi.
 export function ReminderDemo() {
+  const { eslatma: T } = useSiteContent().website.home;
   const ref = useRef<HTMLDivElement>(null);
   const [stage, setStage] = useState<Stage>("wait");
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);

@@ -12,3 +12,7 @@ npm-debug.log*
 test-results/
 # QA skrinshotlari: faqat hisobotlar saqlanadi
 docs/qa/**/*.png
+# lokal PGlite bazasi (admin) — gitga kirmaydi
+.data/
+# Vercel account/project linkage va yuklab olingan env fayllari
+.vercel/

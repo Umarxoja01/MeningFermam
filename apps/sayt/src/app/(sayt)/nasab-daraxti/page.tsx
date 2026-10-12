@@ -1,8 +1,8 @@
-import { PageView } from "@/components/sayt/v2/PageView";
+import { PublishedPage } from "@/components/sayt/v2/PublishedPage";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("/nasab-daraxti");
+export const generateMetadata = () => pageMetadata("/nasab-daraxti");
 
 export default function Page() {
-  return <PageView path="/nasab-daraxti" />;
+  return <PublishedPage path="/nasab-daraxti" />;
 }

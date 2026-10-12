@@ -1,10 +1,14 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL, pagePaths } from "@/content/seo";
+import { SITE_URL } from "@/content/seo";
+import { getSiteContent } from "@/lib/cms";
+
+// Statik eksportga mos; CMS so'rovlarida connection() keshni chetlab o'tadi.
+export const revalidate = false;
 
 // statik eksport: build vaqtida bir marta yaratiladi
-export const dynamic = "force-static";
 
 // 11 ommaviy URL (TZ v3.1 §3). Bazasiz, statik.
-export default function sitemap(): MetadataRoute.Sitemap {
-  return pagePaths.map((p) => ({ url: `${SITE_URL}${p === "/" ? "" : p}`, changeFrequency: "monthly", priority: p === "/" ? 1 : 0.6 }));
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const { website } = await getSiteContent();
+  return ["/", ...Object.keys(website.pages)].map((p) => ({ url: `${SITE_URL}${p === "/" ? "" : p}`, changeFrequency: "monthly", priority: p === "/" ? 1 : 0.6 }));
 }

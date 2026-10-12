@@ -250,3 +250,35 @@ Egasi auditdagi tuzatishlarni “boshla” bilan tasdiqladi (E-22). Manba faylla
 Yangi regressiyalarni qayta bajarish: sayt ishlayotganida `npm run qa:regressions` (standart port 3100; boshqa port uchun `BASE_URL`). JSON hisobotlar uchun `OUT_FILE` berilsa, mutlaq yo'l ishlating.
 
 **Tekshiruv chegarasi:** haqiqiy Android/iPhone, Apache/nginx hosting va fermer sinovi bu bosqichda o'tkazilmadi. Demo v12 bilan eski piksel moslik foizlari yangi maketga qo'llanmaydi: bo'limlar tartibi va matnlar E-22 asosida qasddan o'zgartirildi. Ommaviy hostingga joylashtirilmagan.
+
+# Admin orqali saytni boshqarish (2026-10-13, E-23)
+
+**Joriy natija:** login/parol va majburiy TOTP bilan himoyalangan admin ommaviy saytga ulandi. Saytning dizayn sozlamalari, matnlari, bo'limlari, sahifalari, SEO, logo/rasmlari va oddiy formulali hisoblagichlari qoralama → nashr → ochiq sayt tartibida ishlaydi. Qo'shish, o'chirish, yashirish, tartiblash va eski versiyadan tiklash mavjud. Bu eski ADMIN_TZ dagi barcha klinik, foydalanuvchi boshqaruvi va hosting bandlari tugagan degani emas.
+
+**Muhit:** Windows, Node 24.21.0, Next.js 16.4.0, production buildlar; admin `localhost:4320`, sayt `localhost:4310`. Sinov faqat yangi `qa-cms-*` PGlite bazasi va vaqtinchalik account bilan bajarildi. Yakuniy E2E: 2026-10-13 02:24 (Asia/Tashkent; JSON vaqti UTC).
+
+| Tekshiruv | Natija |
+|---|---|
+| Workspacelar lint/typecheck, keyingi public/admin lint va build TypeScript tekshiruvlari | O'TDI |
+| Unit testlar (`npm test`) | **157/157**: kontent 41, baza 14, admin 41, sayt 61 |
+| Statik public build (`CMS_MODE=static`) | O'TDI: `out/` eksport saqlangan |
+| Dinamik public build (`CMS_MODE=dynamic`) va admin production build | O'TDI: yangi sahifalar va `/media/[id]` so'rovda bajariladi |
+| Haqiqiy brauzerda CMS E2E | **13/13**, xato va o'tkazib yuborilgan bosqich yo'q; [JSON dalil](qa/cms-e2e-2026-10-13.json) |
+| Adminning 390 va 1366 px ko'rinishi | O'TDI: gorizontal siljish yo'q; ikkala screenshot ko'z bilan ko'rildi |
+| O'zgarishlar formati (`git diff --check`, CRLF hisobga olingan) | O'TDI |
+
+E2E tasdiqlagan holatlar: kirishsiz admin yopiq; noto'g'ri parol rad etiladi; parol + TOTP ishlaydi; qoralama saytga chiqmaydi; nashrdagi matn/rang avval ochilgan tabda ichki navigatsiyada ham yangilanadi; yangi bo'limning tartibi va ko'rinishi boshqariladi; yashirilgan bo'lim havolalari yo'qoladi; yangi sahifa va hisoblagich haqiqiy 7 500/5 000 natijalarini beradi; sahifa o'chirilsa menyu/footer havolalari ketadi va URL 404 qaytaradi; rasm qoralamada 404, nashrdan keyin asl PNG baytlari bilan 200; eski versiya nashr etilganda boshlang'ich ma'lumotlar va havolalar qaytadi. Brauzerdagi JavaScript xatolari: **0**.
+
+Topilgan va tuzatilgan haqiqiy CMS xatolari: dinamik rasm yo'lining statik generator sabab 500 qaytarishi; umumiy layout/template ichidagi eski CMS ma'lumoti navigatsiyada qolishi; yashirilgan bo'lim/o'chirilgan sahifaga havolalar qolishi. Testlar tuzatilgan xatti-harakatni production serverlarda tekshirdi.
+
+**Qayta bajarish:** dinamik sayt va admin buildlari tayyor bo'lganda `npm run qa:cms:prepare -w apps/admin`, alohida terminalda `npm run qa:cms:serve -w apps/admin`, keyin `npm run qa:cms -w apps/admin`. Har full run oldidan yangi fixture kerak, chunki TOTP birinchi kirishda sozlanadi. Production bazada QA prepare ishlatilmaydi.
+
+**Chegara:** Vercel/Eskizga deploy, haqiqiy PostgreSQL, production HTTPS/kirish, telefon qurilmalari va klinik mutaxassis tasdig'i tekshirilmadi. Rasm yuklash 2 MB PNG/JPEG/WebP; video HTTPS havolasi bilan. Yangi dasturiy xizmat/to'lov/SMS oddiy formula muharriridan yaratilmaydi. Ishga tushirish va hosting sozlamalari: [ADMIN_CMS.md](ADMIN_CMS.md).
+
+## Vercelga chiqarish tayyorgarligi (2026-10-13)
+
+Egasining "BAJAR" ko'rsatmasi asosida production deploy boshlandi. GitHub `Umarxoja01/MeningFermam` ulanishi tasdiqlandi; mavjud ommaviy `https://mening-fermam.vercel.app` sayt HTTP 200 qaytardi. Bu manzil hali yangi admin/CMS nashri sifatida tekshirilmagan.
+
+Ikkala Next configga monorepo uchun `outputFileTracingRoot` berildi, Node `24.x`ga mahkamlandi, CMS env namunalari yangilandi, `.vercel/` Gitdan chiqarildi. O'zgarishdan so'ng public dynamic va admin production buildlari hamda barcha workspace lint tekshiruvlari o'tdi. Pushga tayyor 198 ta manba fayli tekshirildi: haqiqiy maxfiy kalit, bazaning nusxasi yoki private key topilmadi; `.env.local`, `.data`, `.next` va `.vercel` Gitga kirmaydi.
+
+**Hozirgi tashqi blok:** Vercel CLI hisobdan chiqqan; Vercel/Neon ulanishlari hali o'rnatilmagan, PostgreSQL production URL mavjud emas. Shu sababli production migratsiya va to'liq admin/CMS deploy bajarilgani da'vo qilinmaydi. Hisoblar ulangach, ikki loyiha envlari → migratsiya → admin/seed → deploy → production brauzer sinovi davom ettiriladi.

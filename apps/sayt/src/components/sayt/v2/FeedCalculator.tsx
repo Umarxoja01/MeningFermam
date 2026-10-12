@@ -1,6 +1,7 @@
 "use client";
+import { useSiteContent } from "./CmsProvider";
 import { useId, useState } from "react";
-import { yem } from "@/content/bosh";
+
 import { animalKeys, animals, calculateFeed, type AnimalKey } from "@/lib/feed-calc";
 import { resetPrices, setPrice, usePrices, useStorageAvailable } from "@/lib/price-store";
 import { FEED_KEYS, PRICE_MAX, PRICE_MIN, PRICE_STEP, defaultPrices, feedNames, parsePriceInput, stepPrice, type FeedKey } from "@/lib/prices";
@@ -10,6 +11,7 @@ import { Tween } from "./Tween";
 // Narx: 0..100 000 butun son; yozish paytida bo'sh maydon hisobni buzmaydi; noto'g'ri qiymat rad etiladi va izoh chiqadi,
 // maydondan chiqqanda oxirgi to'g'ri narx qaytadi; faqat narxlar localStorage'da; xotira ishlamasa sahifa ishlayveradi.
 export function FeedCalculator() {
+  const { yem } = useSiteContent().website.home;
   const id = useId();
   const [animal, setAnimal] = useState<AnimalKey>("sigir");
   const [weight, setWeight] = useState(animals.sigir.defaultWeight);

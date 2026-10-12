@@ -29,6 +29,7 @@ Ustuvorlik: egasining aniq, eng so'nggi qarori → tasdiqlangan TZ → v3.1 tuza
 | E-20 | Admin TZ (`docs/ADMIN_TZ.md`) tasdiqlandi; S-1…S-9 tavsiya bo'yicha: telefon+parol+TOTP, "mutaxassis tasdig'isiz" belgisi, bitta repozitoriyda ikki dastur, Drizzle, bigint ID, sessiya 30 daq/12 soat, jurnal 1 yil, video yuklash, Eskiz VPS | C/D bosqichlari |
 | E-21 | **Faqat frontend** (2026-10-12): admin panel va baza loyihadan olib tashlanadi; sayt to'liq statik | E-19, E-20 va D-17…D-33 arxivlangan backend'ga tegishli (`Downloads/meningfermam-backend-arxiv-2026-10-12`); matn/kontakt endi `apps/sayt/src/content` fayllarida o'zgartiriladi (E-08, E-16 shunga ko'ra) |
 | E-22 | Professional auditdagi 10 kamchilikni tuzatish boshlandi (2026-10-12, egasining “boshla” ko'rsatmasi) | E-10/E-11 o'rniga tasdiqlanmagan ekspert/sertifikat da'volari olib tashlanadi, “Ishlaydi” → “Namuna”; asosiy tushuntirish kartochkalardan oldin keladi. Doza va tibbiy yo'riqnoma o'zgartirilmaydi; takroriy kunlar faqat namuna bosqichi sifatida kuzatiladi. |
+| E-23 | Admin qayta kerak: login/parol orqali sayt dizayni, yozuvlar, bo'limlar va sahifalarni qo'shish, o'chirish, o'zgartirish; yangi funksiyalar qo'shish (2026-10-12, davom ettirish 2026-10-13) | E-21 o'rniga admin va baza qayta ulandi. Dizayn/joylashuv boshqaruvi va yangi formulali hisoblagichlar qo'shildi; murakkab yangi backend yoki tashqi xizmatni adminning o'zi dasturlamaydi. |
 
 ## Ishlab chiquvchi qarorlari (egasi qarorlari va TZ doirasida)
 

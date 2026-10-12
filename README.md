@@ -1,15 +1,22 @@
-# MeningFermam — ommaviy sayt (faqat frontend)
+# MeningFermam — sayt va admin panel
 
-Chorvadorlar uchun ommaviy veb-sayt: 10 blokli bosh sahifa, 10 ichki sahifa, 404, SEO.
-To'liq statik (`apps/sayt/out/`): serverda Node.js yoki baza kerak emas, istalgan hostingga yuklanadi.
+Admin orqali saytning matnlari, dizayni, logo/rasmlari, bo'limlari, sahifalari, tugmalari, SEO va funksiya kartalari boshqariladi. Sonli maydon va formula berib yangi oddiy hisoblagich yaratish mumkin. Login — telefon raqami; parol va ikki bosqichli kod bilan himoyalangan.
 
 ```bash
 npm install
-npm run dev                     # ishlab chiqish
-npm run lint && npm run typecheck && npm test && npm run build
-npm run serve                   # out/ ni lokal ko'rish (http://localhost:3100)
+npm run cms:migrate
+npm run cms:build
+npm run cms:start
 ```
 
-- `apps/sayt` — sayt; `packages/content` — kontent sxemalari va qoidalari (testlar uchun).
-- Hujjatlar: `docs/VSCODE_TZ.md` (ishlash va hostingga yuklash), `docs/DECISIONS.md`, `docs/TEST_REPORT.md`, `docs/VISUAL_PARITY_REPORT.md`, `docs/MATNLAR_QORALAMA.md`.
-- Backend (admin panel, baza) 2026-10-12 da olib tashlangan va `Downloads/meningfermam-backend-arxiv-2026-10-12` ga arxivlangan.
+Admin: **http://localhost:3200**. Sayt: **http://localhost:3100**. Ishlab chiqish uchun `npm run cms:dev`. `apps/admin/.env.local` ichida `DATABASE_URL` va `ADMIN_ENC_KEY` kerak. Mavjud shifrlash kalitini almashtirmang: u oldingi ikki bosqichli kirish ma'lumotlari uchun ishlatiladi.
+
+Administrator bo'lmasa: `npm run admin:create -- --phone +998XXXXXXXXX --name "Ism"`. Parol terminalda yashirin so'raladi. Dastlabki sayt qiymatlarini olish: `npm run content:seed -- --by +998XXXXXXXXX` (mavjud nashrlarga tegmaydi).
+
+Tahrir: **Sayt boshqaruvi → Qoralama saqlash → Nashr qilish**, keyin saytni yangilang. Batafsil foydalanish va Vercel sozlamalari: [ADMIN_CMS.md](docs/ADMIN_CMS.md).
+
+Tuzilma: `apps/sayt` — ommaviy sayt; `apps/admin` — boshqaruv paneli; `packages/content` — sxemalar va formulalar; `packages/db` — baza va migratsiyalar. Backend qayta ulangan; oldingi arxiv alohida saqlangan.
+
+Bazasiz statik rejim ham saqlanadi: `CMS_MODE` berilmasa `npm run build` → `apps/sayt/out/`, `npm run serve` orqali ko'riladi. Admin o'zgarishlari darhol chiqishi uchun **dinamik CMS rejimi** kerak.
+
+Tekshiruvlar: `npm run lint`, `npm run typecheck`, `npm test`. Dalillar: [TEST_REPORT.md](docs/TEST_REPORT.md).

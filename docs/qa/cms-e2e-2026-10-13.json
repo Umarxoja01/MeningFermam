@@ -1,0 +1,177 @@
+{
+  "summary": {
+    "at": "2026-10-12T21:24:27.723Z",
+    "admin": "http://localhost:4320",
+    "site": "http://localhost:4310",
+    "total": 13,
+    "passed": 13,
+    "failed": [],
+    "skipped": []
+  },
+  "results": [
+    {
+      "id": "CMS01",
+      "name": "Kirmagan foydalanuvchi admin sahifalariga kira olmaydi; nashr API ommaviy kontentgina beradi",
+      "pass": true
+    },
+    {
+      "id": "CMS02",
+      "name": "Noto‘g‘ri parol rad etiladi",
+      "pass": true
+    },
+    {
+      "id": "CMS03",
+      "name": "To‘g‘ri parol → TOTP sozlash → boshqaruv paneli",
+      "pass": true
+    },
+    {
+      "id": "CMS04",
+      "name": "Sarlavha/rang qoralamasi saqlanadi, ommaviy sayt eski holatda qoladi",
+      "pass": true
+    },
+    {
+      "id": "CMS05",
+      "name": "Nashrdan keyin sayt yangilangan sarlavha va rangni ko‘rsatadi",
+      "pass": true
+    },
+    {
+      "id": "CMS06",
+      "name": "Qo‘shimcha bo‘lim yaratish/tartibini almashtirish va tayyor bo‘lim/menyuni yashirish",
+      "pass": true
+    },
+    {
+      "id": "CMS07",
+      "name": "Qo‘shimcha bo‘limni yashirish va qayta ko‘rsatish nashrda ishlaydi",
+      "pass": true
+    },
+    {
+      "id": "CMS08",
+      "name": "Yangi sahifa, matn/tugma, footer havolasi va o‘z hisoblagichini yaratish; qoralama hali 404",
+      "pass": true
+    },
+    {
+      "id": "CMS09",
+      "name": "Yangi sahifa/kalkulyator ishlaydi; sahifa o‘chirilganda menyu va footer havolalari ketadi",
+      "pass": true
+    },
+    {
+      "id": "CMS10",
+      "name": "PNG media UI orqali yuklanadi; admin oldindan ko‘radi, qoralama rasmi ommaga ochilmaydi",
+      "pass": true
+    },
+    {
+      "id": "CMS11",
+      "name": "Hero rasmi nashrdan keyin ommaviy baytlar va brauzerdagi rasm sifatida ochiladi",
+      "pass": true
+    },
+    {
+      "id": "CMS12",
+      "name": "Eski versiya yangi qoralama bo‘lib tiklanadi; nashrdan keyin barcha joriy qiymatlar qaytadi",
+      "pass": true
+    },
+    {
+      "id": "CMS13",
+      "name": "Yakun: himoya/JS va 390/1366px admin ko‘rinishi — gorizontal overflow yo‘q",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "publicNavigations": [
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/savollar",
+      "type": "rsc",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "rsc",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/qa-cms-e2e",
+      "type": "document",
+      "status": 404
+    },
+    {
+      "path": "/",
+      "type": "rsc",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "rsc",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/qa-cms-e2e",
+      "type": "rsc",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "type": "document",
+      "status": 200
+    }
+  ],
+  "screenshots": [
+    {
+      "width": 1366,
+      "path": "C:\\Users\\tukht\\AppData\\Local\\Temp\\meningfermam-cms-admin-1366-1791840266238.png"
+    },
+    {
+      "width": 390,
+      "path": "C:\\Users\\tukht\\AppData\\Local\\Temp\\meningfermam-cms-admin-390-1791840267430.png"
+    }
+  ],
+  "screenshot": "C:\\Users\\tukht\\AppData\\Local\\Temp\\meningfermam-cms-admin-390-1791840267430.png"
+}

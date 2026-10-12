@@ -1,14 +1,14 @@
 import type { NextConfig } from "next";
+import path from "node:path";
 
-// Faqat frontend (egasi qarori, 2026-10-12): sayt to'liq statik eksport qilinadi — `out/` papkasida oddiy HTML/CSS/JS.
-// Serverda Node.js yoki baza kerak emas; istalgan hostingga (Apache, nginx) yuklanadi.
-// Statik eksportda `headers()` ishlamaydi: xavfsizlik sarlavhalari va toza URL'lar `public/.htaccess` da (Apache)
-// yoki docs/VSCODE_TZ.md dagi nginx sozlamasida.
+// CMS_MODE=dynamic: admin nashrlari har yangi so'rovda umumiy bazadan olinadi.
+// Env belgilanmasa eski bazasiz statik eksport saqlanadi.
 const nextConfig: NextConfig = {
-  output: "export",
+  outputFileTracingRoot: path.resolve(__dirname, "../.."),
+  ...(process.env.CMS_MODE === "dynamic" ? {} : { output: "export" as const }),
   poweredByHeader: false,
   // umumiy kontent turlari (packages/content) TypeScript manbasi sifatida
-  transpilePackages: ["@meningfermam/content"],
+  transpilePackages: ["@meningfermam/content", "@meningfermam/db"],
 };
 
 export default nextConfig;
