@@ -1,0 +1,18 @@
+{
+  "name": "meningfermam",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "dev": "npm run dev -w apps/sayt",
+    "build": "npm run build -w apps/sayt",
+    "serve": "npm run serve -w apps/sayt",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "qa:site": "npm run qa:site -w apps/sayt",
+    "qa:behavior": "npm run qa:behavior -w apps/sayt",
+    "qa:visual": "npm run qa:visual -w apps/sayt",
+    "qa:regressions": "npm run qa:regressions -w apps/sayt"
+  },
+  "engines": { "node": ">=20.9.0" }
+}

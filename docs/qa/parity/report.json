@@ -1,0 +1,162 @@
+{
+  "at": "2026-10-12T12:39:33.691Z",
+  "demo": "file:///C:/Users/tukht/Downloads/mening%20%20fermam/meningfermam-demo-v12.html",
+  "base": "http://localhost:3100",
+  "threshold": 0.15,
+  "rows": [
+    {
+      "block": "menyu",
+      "width": 390,
+      "demo": "354×60",
+      "site": "370×60",
+      "diffPct": 7.31
+    },
+    {
+      "block": "1-muammo",
+      "width": 390,
+      "demo": "374×467",
+      "site": "390×523",
+      "diffPct": 4.97
+    },
+    {
+      "block": "2-hero",
+      "width": 390,
+      "demo": "374×889",
+      "site": "390×889",
+      "diffPct": 6.18
+    },
+    {
+      "block": "3-yem",
+      "width": 390,
+      "demo": "374×1683",
+      "site": "390×1389",
+      "diffPct": 5.44
+    },
+    {
+      "block": "4-kasal",
+      "width": 390,
+      "demo": "374×2472",
+      "site": "390×2371",
+      "diffPct": 9.63
+    },
+    {
+      "block": "5-ombor",
+      "width": 390,
+      "demo": "374×1498",
+      "site": "390×1504",
+      "diffPct": 3.62
+    },
+    {
+      "block": "6-eslatma",
+      "width": 390,
+      "demo": "374×775",
+      "site": "390×803",
+      "diffPct": 12.89
+    },
+    {
+      "block": "7-statistika",
+      "width": 390,
+      "demo": "374×847",
+      "site": "390×847",
+      "diffPct": 2.1
+    },
+    {
+      "block": "8-holat",
+      "width": 390,
+      "demo": "374×989",
+      "site": "390×989",
+      "diffPct": 2.22
+    },
+    {
+      "block": "9-yakun",
+      "width": 390,
+      "demo": "374×343",
+      "site": "390×369",
+      "diffPct": 8.07
+    },
+    {
+      "block": "10-footer",
+      "width": 390,
+      "demo": "374×752",
+      "site": "390×939",
+      "diffPct": 4.91
+    },
+    {
+      "block": "menyu",
+      "width": 1366,
+      "demo": "1160×60",
+      "site": "1160×60",
+      "diffPct": 0.17
+    },
+    {
+      "block": "1-muammo",
+      "width": 1366,
+      "demo": "1350×480",
+      "site": "1366×480",
+      "diffPct": 2.2
+    },
+    {
+      "block": "2-hero",
+      "width": 1366,
+      "demo": "1350×838",
+      "site": "1366×838",
+      "diffPct": 6.84
+    },
+    {
+      "block": "3-yem",
+      "width": 1366,
+      "demo": "1350×1120",
+      "site": "1366×1026",
+      "diffPct": 4.03
+    },
+    {
+      "block": "4-kasal",
+      "width": 1366,
+      "demo": "1350×1683",
+      "site": "1366×1500",
+      "diffPct": 6.75
+    },
+    {
+      "block": "5-ombor",
+      "width": 1366,
+      "demo": "1350×937",
+      "site": "1366×942",
+      "diffPct": 3.29
+    },
+    {
+      "block": "6-eslatma",
+      "width": 1366,
+      "demo": "1350×653",
+      "site": "1366×653",
+      "diffPct": 4.42
+    },
+    {
+      "block": "7-statistika",
+      "width": 1366,
+      "demo": "1350×620",
+      "site": "1366×621",
+      "diffPct": 2.73
+    },
+    {
+      "block": "8-holat",
+      "width": 1366,
+      "demo": "1350×502",
+      "site": "1366×502",
+      "diffPct": 2.22
+    },
+    {
+      "block": "9-yakun",
+      "width": 1366,
+      "demo": "1350×371",
+      "site": "1366×371",
+      "diffPct": 2.76
+    },
+    {
+      "block": "10-footer",
+      "width": 1366,
+      "demo": "1350×323",
+      "site": "1366×397",
+      "diffPct": 3.68
+    }
+  ]
+}

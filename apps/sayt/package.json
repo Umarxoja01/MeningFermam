@@ -1,0 +1,40 @@
+{
+  "name": "sayt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/flatten-segments.mjs out",
+    "start": "node scripts/serve-static.mjs out 3100",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "qa:site": "node scripts/qa/site-check.mjs",
+    "qa:behavior": "node scripts/qa/behavior-parity.mjs",
+    "qa:visual": "node scripts/qa/visual-parity.mjs",
+    "serve": "node scripts/serve-static.mjs out 3100",
+    "qa:audit": "node scripts/qa/audit-fixes.mjs",
+    "qa:regressions": "node scripts/qa/audit-ux-regressions.mjs && node scripts/qa/audit-product-regressions.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "@meningfermam/content": "*"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.64.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "22.20.5",
+    "@types/react": "~19.2.0",
+    "@types/react-dom": "~19.2.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.0",
+    "pixelmatch": "7.2.0",
+    "pngjs": "7.0.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "vitest": "5.0.3"
+  }
+}

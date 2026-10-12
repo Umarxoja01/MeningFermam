@@ -1,0 +1,515 @@
+{
+  "at": "2026-10-12T14:07:38.094Z",
+  "base": "http://localhost:4311",
+  "summary": {
+    "total": 63,
+    "passed": 63,
+    "failed": []
+  },
+  "results": [
+    {
+      "id": "01",
+      "kind": "M",
+      "name": "Logo bosh sahifaga olib boradi",
+      "q": "",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "02",
+      "kind": "M",
+      "name": "Tepa menyuning 7 havolasi",
+      "q": "§6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "03",
+      "kind": "O'",
+      "name": "Tepadagi “Ilova haqida” → ilova holati oynasi (#oxiri emas)",
+      "q": "Q17",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "04",
+      "kind": "M",
+      "name": "Pastki menyu: Yem, Molim kasal, Dorilar, Aloqa; joriy bo'lim belgilanadi",
+      "q": "§6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "05",
+      "kind": "M",
+      "name": "O'qilish chizig'i scroll bilan to'ladi",
+      "q": "§6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "06",
+      "kind": "O'",
+      "name": "Suzuvchi 📞 tugma haqiqiy tel: havola",
+      "q": "Q18",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "07",
+      "kind": "M",
+      "name": "Lenta o'zi aylanadi",
+      "q": "Q02",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "08",
+      "kind": "M",
+      "name": "Sichqoncha ustida sekinlashadi",
+      "q": "§4.1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "09",
+      "kind": "M",
+      "name": "Sichqoncha/touch bilan surish",
+      "q": "§4.1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "10",
+      "kind": "M",
+      "name": "Surish kartochkani tasodifan bosmaydi; oddiy bosish bo'limga o'tadi",
+      "q": "Q01",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "11",
+      "kind": "Y",
+      "name": "“To‘xtatish / Davom ettirish” tugmasi",
+      "q": "Q02",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "12",
+      "kind": "Y",
+      "name": "Ekrandan chiqqanda lenta to'xtaydi",
+      "q": "Q02",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "13",
+      "kind": "Y",
+      "name": "Klaviatura: kartochkaga fokus — lenta to'xtaydi, Enter bo'limga olib boradi",
+      "q": "§4.1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "14",
+      "kind": "O'",
+      "name": "9 kartochka; 8-kartochka “Vazn” → #yem; “Zot” kartochkasi yo'q",
+      "q": "Q01",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "15",
+      "kind": "M",
+      "name": "Hero parallaksi (sichqoncha)",
+      "q": "§4.2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "16",
+      "kind": "O'",
+      "name": "H1 aynan; yagona Hero CTA “Yem hisobini sinab ko‘ring ›” → #yem",
+      "q": "Q03",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "17",
+      "kind": "O'",
+      "name": "Video yo'q — SVG sahna; “Video joyi” yozuvi yo'q; vetapteka “rejalashtirilgan”",
+      "q": "Q14",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "18",
+      "kind": "M",
+      "name": "Hayvon tanlash; standart tanlovlar",
+      "q": "Q07",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "19",
+      "kind": "X",
+      "name": "Zot maydoni va zot koeffitsiyenti yo'q; nasab sahifasi buzilmagan",
+      "q": "Q04",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "20",
+      "kind": "O'",
+      "name": "Vazn: sigir/buqa 300–600, qo'y 30–75",
+      "q": "Q07",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "21",
+      "kind": "M",
+      "name": "Holat: sigir 5–25 litr; buqa Kam/O‘rtacha/Ko‘p; qo'y Oddiy/Ko‘proq",
+      "q": "Q07",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "22",
+      "kind": "M",
+      "name": "Natija ro'yxati: yemlar va tuz",
+      "q": "§4.3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "23",
+      "kind": "M",
+      "name": "Sigir 400 kg / 10 litr: 36 400 so‘m kuniga, ~1 092 000 so‘m oyiga",
+      "q": "Q05",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "24",
+      "kind": "X",
+      "name": "Prognoz yo'q (sut/vazn oshishi)",
+      "q": "Q08",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "25",
+      "kind": "M",
+      "name": "“Yem narxlarini o‘zingiz yozing” ochiladi",
+      "q": "§4.3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "26",
+      "kind": "M",
+      "name": "Beda +100 → 36 900; −100 → 36 400; 0 da “−” o'chiq",
+      "q": "Q06",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "27",
+      "kind": "O'",
+      "name": "Noto'g'ri narx rad etiladi (izoh chiqadi, hisob o'zgarmaydi); bo'sh maydon hisobni buzmaydi",
+      "q": "Q06",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "28",
+      "kind": "O'",
+      "name": "Narx reload'da saqlanadi, 0 ham; buzilgan xotira sahifani buzmaydi",
+      "q": "Q06",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "29",
+      "kind": "M",
+      "name": "“Taxminiy narxlarga qaytarish” — narxlar va xotira tozalanadi",
+      "q": "Q06",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "30",
+      "kind": "M",
+      "name": "Kim kasal: sigir, buzoq, buqa, qo'y",
+      "q": "§4.4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "31",
+      "kind": "M",
+      "name": "Alomat tanlansa ehtimoliy holat va izoh almashadi",
+      "q": "§4.4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "32",
+      "kind": "O'",
+      "name": "Alomat avtomatik tashxis emas: “Ehtimoliy holat (namuna)”",
+      "q": "Q09",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "33",
+      "kind": "M",
+      "name": "Shoshilinch alomat: veterinarga murojaat birinchi, davolash boshqaruvi yo'q",
+      "q": "Q10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "34",
+      "kind": "O'",
+      "name": "“Veterinar chaqirish” veterinar raqamiga qo'ng'iroq qiladi, Telegram bilan",
+      "q": "§4.4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "35",
+      "kind": "M",
+      "name": "Sxema va dorilar ko'rsatiladi (egasi qarori: ma'lumot saqlanadi)",
+      "q": "§4.4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "36",
+      "kind": "M",
+      "name": "Vazn tanlansa doza qayta hisoblanadi (300 kg → 8 ml)",
+      "q": "§4.4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "37",
+      "kind": "O'",
+      "name": "“Bajarildi”: hamma dori ayiriladi, kun +1; “Ertaga eslatma keladi” yo'q",
+      "q": "Q11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "38",
+      "kind": "O'",
+      "name": "Bitta dori yetmasa kun bajarilmaydi va hech narsa ayirilmaydi",
+      "q": "Q11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "39",
+      "kind": "Y",
+      "name": "Tez ikki marta bosish bir marta hisobdan chiqadi",
+      "q": "Q12",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "40",
+      "kind": "O'",
+      "name": "Takroriy kurs 14-kun bosqichidan keyingina tugaydi",
+      "q": "Q11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "41",
+      "kind": "M",
+      "name": "Yangi flakon ochilgani xabarda aytiladi",
+      "q": "§4.5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "42",
+      "kind": "O'",
+      "name": "Vetapteka: “Tez kunda”, masofa/ochiq/dori bor yo'q",
+      "q": "Q14",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "43",
+      "kind": "O'",
+      "name": "Ombor: 5 dori va 3 namuna birligi; telefonda 1, planshetda 2, kompyuterda 3 ustun",
+      "q": "§4.5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "44",
+      "kind": "M",
+      "name": "“Kam qoldi” belgisi",
+      "q": "§4.5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "45",
+      "kind": "O'",
+      "name": "Ochilgan flakon: “muddat tasdiqlanmagan” (kun soni yo'q)",
+      "q": "§4.5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "46",
+      "kind": "M",
+      "name": "“+ 1 flakon oldim” qo'shadi; fokus tugmada qoladi",
+      "q": "§4.5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "47",
+      "kind": "O'",
+      "name": "“Omborni boshidan ko‘rsatish”: ombor va davolash kuni birga tiklanadi",
+      "q": "Q13",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "48",
+      "kind": "M",
+      "name": "Bildirishnoma bo'limga kelganda chiqadi",
+      "q": "Q15",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "49",
+      "kind": "Y",
+      "name": "“Keyinroq” maket holatini o'zgartiradi (push yo'q)",
+      "q": "Q15",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "50",
+      "kind": "M",
+      "name": "“Berdim” → “Berildi”, holat e'lon qilinadi",
+      "q": "Q15",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "51",
+      "kind": "Y",
+      "name": "Namunani qayta ko'rsatish",
+      "q": "§4.6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "52",
+      "kind": "M",
+      "name": "Statistika chiziqlari to'ladi; juftlash namunasi",
+      "q": "§4.7",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "53",
+      "kind": "M",
+      "name": "Holat tablari bosilganda almashadi",
+      "q": "Q16",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "54",
+      "kind": "Y",
+      "name": "Tablar: ←/→, Home/End, ARIA va fokus",
+      "q": "Q16",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "55",
+      "kind": "O'",
+      "name": "Yakundagi “Ilova haqida” → ilova holati oynasi; #boshi/#oxiri ga olib boruvchi Boshlash yo'q",
+      "q": "Q17",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "56",
+      "kind": "M",
+      "name": "Footer: logo va 5 bo'lim havolasi",
+      "q": "§4.9",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "57",
+      "kind": "O'",
+      "name": "Footer aloqasi haqiqiy; soxta shablon yo'q",
+      "q": "Q18",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "58",
+      "kind": "O'",
+      "name": "Maxfiylik va Shartlar havolalari; 10 ichki sahifa 200; 404 sahifasi",
+      "q": "Q19",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "59",
+      "kind": "M",
+      "name": "Kompyuterda kursor halqasi va tilt",
+      "q": "§8.3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "60",
+      "kind": "M",
+      "name": "Reduced-motion: hamma kontent ko'rinadi, lenta to'xtagan, raqamlar darhol",
+      "q": "Q02, Q21",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "Q-meta",
+      "kind": "Y",
+      "name": "/yem-rejasi va /savollar meta tavsifi TZ §5 dagidek",
+      "q": "Q22",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "Q-ichki",
+      "kind": "Y",
+      "name": "Ichki sahifadan /#yem fragment havolasi bosh sahifa bo'limiga olib boradi",
+      "q": "§6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "Q-davolash",
+      "kind": "Y",
+      "name": "/davolash-rejasi: shoshilinch ogohlantirish, namuna va ombor bir sahifada ishlaydi",
+      "q": "§5",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

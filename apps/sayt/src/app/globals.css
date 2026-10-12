@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Dizayn tokenlari sayt.css da (:root). Tailwind preflight + kerak bo'lsa utility klasslar. */
+@theme inline {
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-soft: var(--soft);
+  --color-green: var(--green);
+  --color-line: var(--line);
+  --font-sans: var(--sans);
+}
