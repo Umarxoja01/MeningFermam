@@ -1,0 +1,87 @@
+{
+  "at": "2026-10-13T03:57:53.287Z",
+  "total": 13,
+  "passed": 13,
+  "failed": [],
+  "results": [
+    {
+      "id": "AQ01",
+      "name": "Kontent sahifalari kirmagan foydalanuvchiga yopiq",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "C3-01",
+      "name": "Bosh ekran: 3 bo'lim, har biri saytda 1-versiya",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "C3-02",
+      "name": "Aloqa: qoralama saqlanadi, sayt (nashr) o'zgarmaydi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "C3-03",
+      "name": "Noto'g'ri telefon saqlanmaydi (xato ko'rsatiladi, versiya yaratilmaydi)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "C3-04",
+      "name": "Farq: 2-versiya ↔ saytdagi versiya",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ09",
+      "name": "Nashr: saytdagi versiya yangilanadi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ10",
+      "name": "Tiklash: 1-versiyadan qoralama (3) → nashr; tarix saqlanadi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "C3-05",
+      "name": "Bir vaqtda tahrir: ikkinchi saqlash “conflict” — o'zgarish yo'qolmaydi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "C3-06",
+      "name": "Funksiya qo'shish va o'chirish; har tabda kamida bitta bo'lmasa saqlanmaydi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "C3-07",
+      "name": "Savol-javob: “bepul” — nashrda ogohlantirish; tasdiq bilan nashr",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ04",
+      "name": "Muharrir: qoralama va ko'rib chiqishga yuborish mumkin; nashr tugmasi yo'q; to'g'ridan-to'g'ri so'rov ham rad",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ09-b",
+      "name": "Administrator ko'rib chiqishdagi versiyani nashr qiladi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "UI",
+      "name": "Bosish yuzasi ≥44 px (390 px, kontent sahifalari) va konsolda xato yo'q",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "consoleErrors": []
+}

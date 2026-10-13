@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-12T12:39:33.691Z",
+  "at": "2026-10-13T04:15:37.119Z",
   "demo": "file:///C:/Users/tukht/Downloads/mening%20%20fermam/meningfermam-demo-v12.html",
   "base": "http://localhost:3100",
   "threshold": 0.15,
@@ -9,84 +9,84 @@
       "width": 390,
       "demo": "354×60",
       "site": "370×60",
-      "diffPct": 7.31
+      "diffPct": 5.91
     },
     {
       "block": "1-muammo",
       "width": 390,
       "demo": "374×467",
-      "site": "390×523",
-      "diffPct": 4.97
+      "site": "390×524",
+      "diffPct": 5.28
     },
     {
       "block": "2-hero",
       "width": 390,
       "demo": "374×889",
-      "site": "390×889",
-      "diffPct": 6.18
+      "site": "390×849",
+      "diffPct": 35.33
     },
     {
       "block": "3-yem",
       "width": 390,
       "demo": "374×1683",
       "site": "390×1389",
-      "diffPct": 5.44
+      "diffPct": 5.65
     },
     {
       "block": "4-kasal",
       "width": 390,
       "demo": "374×2472",
-      "site": "390×2371",
-      "diffPct": 9.63
+      "site": "390×2392",
+      "diffPct": 9.76
     },
     {
       "block": "5-ombor",
       "width": 390,
       "demo": "374×1498",
-      "site": "390×1504",
-      "diffPct": 3.62
+      "site": "390×2321",
+      "diffPct": 6.13
     },
     {
       "block": "6-eslatma",
       "width": 390,
       "demo": "374×775",
-      "site": "390×803",
-      "diffPct": 12.89
+      "site": "390×831",
+      "diffPct": 13.6
     },
     {
       "block": "7-statistika",
       "width": 390,
       "demo": "374×847",
-      "site": "390×847",
-      "diffPct": 2.1
+      "site": "390×870",
+      "diffPct": 4.04
     },
     {
       "block": "8-holat",
       "width": 390,
       "demo": "374×989",
-      "site": "390×989",
-      "diffPct": 2.22
+      "site": "390×1021",
+      "diffPct": 7.84
     },
     {
       "block": "9-yakun",
       "width": 390,
       "demo": "374×343",
-      "site": "390×369",
-      "diffPct": 8.07
+      "site": "390×423",
+      "diffPct": 12
     },
     {
       "block": "10-footer",
       "width": 390,
       "demo": "374×752",
-      "site": "390×939",
-      "diffPct": 4.91
+      "site": "390×1314",
+      "diffPct": 4.49
     },
     {
       "block": "menyu",
       "width": 1366,
       "demo": "1160×60",
       "site": "1160×60",
-      "diffPct": 0.17
+      "diffPct": 4.97
     },
     {
       "block": "1-muammo",
@@ -100,63 +100,63 @@
       "width": 1366,
       "demo": "1350×838",
       "site": "1366×838",
-      "diffPct": 6.84
+      "diffPct": 7.88
     },
     {
       "block": "3-yem",
       "width": 1366,
       "demo": "1350×1120",
       "site": "1366×1026",
-      "diffPct": 4.03
+      "diffPct": 4.07
     },
     {
       "block": "4-kasal",
       "width": 1366,
       "demo": "1350×1683",
-      "site": "1366×1500",
-      "diffPct": 6.75
+      "site": "1366×1520",
+      "diffPct": 6.79
     },
     {
       "block": "5-ombor",
       "width": 1366,
       "demo": "1350×937",
-      "site": "1366×942",
-      "diffPct": 3.29
+      "site": "1366×1292",
+      "diffPct": 4.11
     },
     {
       "block": "6-eslatma",
       "width": 1366,
       "demo": "1350×653",
       "site": "1366×653",
-      "diffPct": 4.42
+      "diffPct": 4.34
     },
     {
       "block": "7-statistika",
       "width": 1366,
       "demo": "1350×620",
       "site": "1366×621",
-      "diffPct": 2.73
+      "diffPct": 2.8
     },
     {
       "block": "8-holat",
       "width": 1366,
       "demo": "1350×502",
       "site": "1366×502",
-      "diffPct": 2.22
+      "diffPct": 2.69
     },
     {
       "block": "9-yakun",
       "width": 1366,
       "demo": "1350×371",
-      "site": "1366×371",
-      "diffPct": 2.76
+      "site": "1366×370",
+      "diffPct": 3.07
     },
     {
       "block": "10-footer",
       "width": 1366,
       "demo": "1350×323",
-      "site": "1366×397",
-      "diffPct": 3.68
+      "site": "1366×634",
+      "diffPct": 2.66
     }
   ]
 }

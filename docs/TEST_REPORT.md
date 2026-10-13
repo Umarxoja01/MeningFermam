@@ -282,3 +282,15 @@ Egasining "BAJAR" ko'rsatmasi asosida production deploy boshlandi. GitHub `Umarx
 Ikkala Next configga monorepo uchun `outputFileTracingRoot` berildi, Node `24.x`ga mahkamlandi, CMS env namunalari yangilandi, `.vercel/` Gitdan chiqarildi. O'zgarishdan so'ng public dynamic va admin production buildlari hamda barcha workspace lint tekshiruvlari o'tdi. Pushga tayyor 198 ta manba fayli tekshirildi: haqiqiy maxfiy kalit, bazaning nusxasi yoki private key topilmadi; `.env.local`, `.data`, `.next` va `.vercel` Gitga kirmaydi.
 
 **Hozirgi tashqi blok:** Vercel CLI hisobdan chiqqan; Vercel/Neon ulanishlari hali o'rnatilmagan, PostgreSQL production URL mavjud emas. Shu sababli production migratsiya va to'liq admin/CMS deploy bajarilgani da'vo qilinmaydi. Hisoblar ulangach, ikki loyiha envlari → migratsiya → admin/seed → deploy → production brauzer sinovi davom ettiriladi.
+
+Kod [deploy/admin-cms-20261013 branchiga](https://github.com/Umarxoja01/MeningFermam/tree/deploy/admin-cms-20261013) chiqarildi (`cbcb46b3a97822b050080a94e22c07186789733d`); ishchi `main` va uning indexi o'zgartirilmadi. GitHubdagi Vercel commit holati **success**, Preview deployment `7024669704` ham **success**. [Preview manzili](https://mening-fermam-i2w9tzx5n-umar-c911.vercel.app). Bu mavjud ommaviy sayt loyihasining preview buildi; production PostgreSQL bilan ulangan alohida admin deployi hali yo'q.
+
+## Admin/CMS auditi (2026-10-13, ikkinchi ko'rik)
+
+Lokal dalillar (production emas): lint 0, typecheck 0, unit 157/157 (41 + 14 + 41 + 61). Statik eksport va dinamik sayt + admin buildlari o'tdi. Yangi alohida QA bazalarida: `qa:cms` 13/13, `qa:auth` 10/10, `qa:content` 13/13 (toza bazada; auth testidan keyingi bazada ishlatilmaydi — TOTP allaqachon sozlangan bo'ladi). Statik sayt: `qa:site` 120 run, 0 xato; `qa:regressions` 4/4 + 7/7; `qa:audit` o'tdi. HEAD (`92f389a`) bilan pikselma-piksel solishtiruv: 28 blok/sahifadan 390 px'da hammasi 0,00 %, 1366 px'da ≤ 0,38 % (qiyshiq telefon maketining anti-aliasing'i).
+
+Tuzatildi:
+- **ERR-CMS-01** `packages/db/migrations/meta`da 0003/0004 snapshotlari yo'q edi: `drizzle-kit generate` keyingi safar `content_bytes` ustuni va `website` qiymatini takror qo'shuvchi, mavjud bazada xato beradigan migratsiya yaratardi (nusxada isbotlandi). Snapshotlar qo'shildi; nusxada `drizzle-kit check` — xato yo'q, `generate` — "No schema changes".
+- **ERR-CMS-02** `scripts/cms.mjs` admin `.env.local`dagi `ADMIN_ENC_KEY` va `DATABASE_URL`ni sayt jarayoniga ham berardi. Sayt kontentni faqat API orqali oladi; endi bu ikki sir sayt build/start jarayoniga uzatilmaydi. `cms:start` bilan sayt API orqali 200 va nashr qilingan kontaktni ko'rsatdi.
+
+Kuzatuvlar (xato deb tasdiqlanmadi): `qa:behavior` uch marta: 61/63, 63/63, 62/63 — har safar boshqa test (59/60, keyin 37) vaqt tugashi bilan; statik serverga 720 parallel so'rovda 0 xato, demak beqarorlik test muhitida. Ommaviy rasm 1 yil `immutable` keshlanadi: rasm nashrdan olinsa ham brauzer keshida qolishi mumkin (test ataylab shuni kutadi — egasi qarori kerak). Statik hostingda `/cms-preview` (noindex) va `/media/unavailable` 200 holati bilan "topilmadi" mazmunini qaytaradi.

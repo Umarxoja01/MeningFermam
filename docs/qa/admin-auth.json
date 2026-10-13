@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-13T03:56:34.317Z",
+  "total": 10,
+  "passed": 10,
+  "failed": [],
+  "results": [
+    {
+      "id": "AQ01-a",
+      "name": "Himoyalangan sahifalar kirishga yo'naltiradi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ01-b",
+      "name": "Xavfsizlik sarlavhalari: no-store, noindex, DENY, nonce'li CSP (unsafe-inline yo'q)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ02-a",
+      "name": "Birinchi kirish: parol → QR bilan sozlash → 10 zaxira kod → bosh ekran",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ02-b",
+      "name": "Keyingi kirish: kodsiz kirib bo'lmaydi; noto'g'ri kod rad; to'g'ri kod bilan kiradi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ02-c",
+      "name": "Zaxira kod bir marta ishlaydi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ03",
+      "name": "5 noto'g'ri paroldan keyin blok; to'g'ri parol ham rad; xabar umumiy",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ06",
+      "name": "Server action: sessiyasiz → kirishga; boshqa Origin → rad",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ13-a",
+      "name": "Parol o'zgarganda boshqa qurilmadagi sessiya ham yopiladi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "AQ13-b",
+      "name": "“Hamma qurilmalardan chiqish”",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "CSP",
+      "name": "Brauzer konsolida CSP buzilishi va JS xatosi yo'q",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "consoleErrors": []
+}

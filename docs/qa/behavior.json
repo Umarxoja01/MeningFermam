@@ -1,10 +1,12 @@
 {
-  "at": "2026-10-12T12:39:30.744Z",
+  "at": "2026-10-13T04:12:52.974Z",
   "base": "http://localhost:3100",
   "summary": {
     "total": 63,
-    "passed": 63,
-    "failed": []
+    "passed": 62,
+    "failed": [
+      "37"
+    ]
   },
   "results": [
     {
@@ -26,7 +28,7 @@
     {
       "id": "03",
       "kind": "O'",
-      "name": "Tepadagi “Boshlash” → “Tez kunda” oynasi (#oxiri emas)",
+      "name": "Tepadagi “Ilova haqida” → ilova holati oynasi (#oxiri emas)",
       "q": "Q17",
       "pass": true,
       "detail": ""
@@ -129,8 +131,8 @@
     },
     {
       "id": "16",
-      "kind": "M",
-      "name": "H1 aynan; yagona Hero CTA “Qanday qilib? ›” → #yem",
+      "kind": "O'",
+      "name": "H1 aynan; yagona Hero CTA “Yem hisobini sinab ko‘ring ›” → #yem",
       "q": "Q03",
       "pass": true,
       "detail": ""
@@ -138,7 +140,7 @@
     {
       "id": "17",
       "kind": "O'",
-      "name": "Video yo'q — SVG sahna; “Video joyi” yozuvi yo'q; vetapteka “tez kunda”",
+      "name": "Video yo'q — SVG sahna; “Video joyi” yozuvi yo'q; vetapteka “rejalashtirilgan”",
       "q": "Q14",
       "pass": true,
       "detail": ""
@@ -300,8 +302,8 @@
       "kind": "O'",
       "name": "“Bajarildi”: hamma dori ayiriladi, kun +1; “Ertaga eslatma keladi” yo'q",
       "q": "Q11",
-      "pass": true,
-      "detail": ""
+      "pass": false,
+      "detail": "TimeoutError: page.goto: Timeout 30000ms exceeded."
     },
     {
       "id": "38",
@@ -321,8 +323,8 @@
     },
     {
       "id": "40",
-      "kind": "M",
-      "name": "Kurs tugaganda “✓ Davolash tugadi”",
+      "kind": "O'",
+      "name": "Takroriy kurs 14-kun bosqichidan keyingina tugaydi",
       "q": "Q11",
       "pass": true,
       "detail": ""
@@ -345,8 +347,8 @@
     },
     {
       "id": "43",
-      "kind": "M",
-      "name": "Ombor: 5 dori; telefonda 1, planshetda 2, kompyuterda 3 ustun",
+      "kind": "O'",
+      "name": "Ombor: 5 dori va 3 namuna birligi; telefonda 1, planshetda 2, kompyuterda 3 ustun",
       "q": "§4.5",
       "pass": true,
       "detail": ""
@@ -442,7 +444,7 @@
     {
       "id": "55",
       "kind": "O'",
-      "name": "Yakundagi “Boshlash” → “Tez kunda” oynasi; #boshi/#oxiri ga olib boruvchi Boshlash yo'q",
+      "name": "Yakundagi “Ilova haqida” → ilova holati oynasi; #boshi/#oxiri ga olib boruvchi Boshlash yo'q",
       "q": "Q17",
       "pass": true,
       "detail": ""
